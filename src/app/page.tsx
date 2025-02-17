@@ -64,7 +64,7 @@ export default async function Home() {
   ])
   const { start: startLevel, end: endLevel, station, datum } = levelsData.meta
   const level: {sg: number, time: string}[] = levelsData.data
-  const { start: startExtremes, end: endExtremes, station: stationExtremes, datum: datumExtremes } = extremesData.meta
+  const { start: startExtremes, end: endExtremes, datum: datumExtremes } = extremesData.meta
   const extremes: {height: number, time: string, type: "high" | "low"}[] = extremesData.data
   const points = [
     ...level.map((row) => ({...row, value: row.sg})),
